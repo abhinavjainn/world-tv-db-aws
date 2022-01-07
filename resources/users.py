@@ -53,13 +53,10 @@ class UserRegister(Resource):
 
 #   Post method to create new user
     def post(self):
-        print("Entered Post")
         data = UserRegister.parser.parse_args()
-        print("parsed", data['username'])
 #       Check if user name is already present
         if UserModel.find_by_username(data['username']):
             return {"message": "A user with the given username already exists"}, 403
-        print('First validation passed')
         # Check if list name is already present
         if TitlesModel.find_by_listname(listname=data['listname']):
             return{"message" : "A list already exists with this name, please select a different list name."}, 403
@@ -72,15 +69,14 @@ class UserRegister(Resource):
                 return{"Message" : "Invalid admin code"}, 401
 
 #       Hash password before saving to DB
-        print("hashing now")
         o_hash = hashlib.new('ripemd160')
         o_hash.update(data["password"].encode("utf-8"))
-        data["password"] = o_hash.hexdigest() 
-        print(o_hash.hexdigest())
+        data["password"] = o_hash.hexdigest()
+
     #   Save new user to DB
         user = UserModel(**data)
         user.save_to_db()
-        # return {"message": o_hash.hexdigest()}, 201
+
         return {"message": "User created successfully."}, 201
 
 # Resource: User Deletion / Sign up
