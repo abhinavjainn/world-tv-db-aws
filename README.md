@@ -3,7 +3,7 @@ A backend flask RESTful API application deployed on AWS.
 
 [Application URL(AWS)](http://python-wowtv.eba-ppa7mzyg.eu-west-2.elasticbeanstalk.com/)
 
-[Previous verison](https://github.com/abhinavjainn/qmul_cloud-computing-mini-project) of the application was deployed on [Heroku](https://world-tv-db.herokuapp.com/).
+[Previous instance](https://github.com/abhinavjainn/qmul_cloud-computing-mini-project) of the application was deployed on [Heroku](https://world-tv-db.herokuapp.com/).
 
 # Application Overview
 
