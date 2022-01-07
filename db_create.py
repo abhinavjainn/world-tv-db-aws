@@ -1,9 +1,9 @@
-from app import app
+from application import application
 from db import db
 
-db.init_app(app)
+db.init_app(application)
 
-@app.before_first_request
+@application.before_first_request
 def create_tables():
     from models.admin import AdminModel
     db.create_all()
@@ -11,7 +11,7 @@ def create_tables():
         AdminModel().save_to_db()    #Required for initial heroku deploymenyt, commented after that
 
 if __name__ == "__main__":
-    app.run()
+    application.run()
 
 # from app import app
 # from db import db
