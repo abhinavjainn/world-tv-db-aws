@@ -1,7 +1,7 @@
 # World TV Database
 A backend flask RESTful API application deployed on AWS.
 
-[Application URL(AWS)](http://python-wowtv.eba-ppa7mzyg.eu-west-2.elasticbeanstalk.com/) | Up between 07:00-23:00 GMT everyday.
+[Application URL(AWS)](http://python-wowtv.eba-ppa7mzyg.eu-west-2.elasticbeanstalk.com/) | Up time 07:00-23:00 GMT everyday.
 
 [Previous instance](https://github.com/abhinavjainn/qmul_cloud-computing-mini-project) of the application was deployed on [Heroku](https://world-tv-db.herokuapp.com/).
 
